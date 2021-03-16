@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5"
+     xml:base="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Est_Localise_Dans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Est_Localise_Dans">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Resident"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Est_associe_A -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Est_associe_A">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Temps -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Temps">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Valeur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Valeur">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#nom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Resident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Buanderie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Buanderie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#CabineDeDouche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#CabineDeDouche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Canape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Canape">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Chaise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Chaise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Chambre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Chambre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Co1_PorteDeLaMaison -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Co1_PorteDeLaMaison">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Co2_PorteDeLaSalleDeBain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Co2_PorteDeLaSalleDeBain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Co3_PorteDeLaCabineDeDouche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Co3_PorteDeLaCabineDeDouche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Cuisine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Cuisine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di1_Robinet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di1_Robinet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di2_Toilette -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di2_Toilette">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di3_Chaise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di3_Chaise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di4_Chaise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di4_Chaise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fauteuil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fauteuil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fo1_Canape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fo1_Canape">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fo2_Canape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fo2_Canape">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fo3_Lit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fo3_Lit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Garderobe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Garderobe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Lit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ir1_TV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ir1_TV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Lit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Lit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph1_GardeRobe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph1_GardeRobe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph2_Canape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph2_Canape">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph3_Refrigerateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph3_Refrigerateur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph4_TiroirDeCuisine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph4_TiroirDeCuisine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph5_GardeRobe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph5_GardeRobe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph6_ArmoireDeToilette -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph6_ArmoireDeToilette">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Refrigerateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Refrigerateur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#TiroirdeCuisine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Resident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Resident"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#SalledeBain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#SalledeBain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Salon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Salon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#So1_Hall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#So1_Hall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#So2_Cuisine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#So2_Cuisine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Sortie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Sortie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Te1_Cuisine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Te1_Cuisine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Television -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Television">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#TiroirdeCuisine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#TiroirdeCuisine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#capteurs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#couloir -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#couloir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Maison"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#lit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#lit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#test2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#test2"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#test3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#test3"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#test4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#test4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Buanderie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Chambre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Cuisine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#SalledeBain"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Salon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Sortie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#couloir"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Co1_PorteDeLaMaison"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Co2_PorteDeLaSalleDeBain"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Co3_PorteDeLaCabineDeDouche"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di1_Robinet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di2_Toilette"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di3_Chaise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Di4_Chaise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fo1_Canape"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fo2_Canape"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Fo3_Lit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ir1_TV"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph1_GardeRobe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph2_Canape"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph3_Refrigerateur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph4_TiroirDeCuisine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph5_GardeRobe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Ph6_ArmoireDeToilette"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#So1_Hall"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#So2_Cuisine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#Te1_Cuisine"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

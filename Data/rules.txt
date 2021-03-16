@@ -1,0 +1,14 @@
+@prefix ns: <http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+
+
+//[rule2: (?x rdf:type ns:activite)(?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "preparer petit dej") -> (?z ns:state 0)]
+
+//[rule3: (?x rdf:type ns:capteur)(?x ns:nom ?d) equal(?d ,"te1") -> (?x ns:etat false)]
+
+//[rule3: (?x ns:state ?d) equal(?d ,1) -> (?x ns:state 0)]
+
+//[rule2: (?x rdf:type ns:capteur)(?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "preparer petit dej") -> (?z ns:state 1)]
+//[rule2: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "fo1") (?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "regarder la television") -> (?z ns:state 1)]
+[rule2: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "fo1") (?x ns:state ?d) equal(?d ,1) (?e rdf:type ns:capteur)(?e ns:nom ?o) equal(?o, "di3") (?e ns:state ?l) equal(?l ,1) (?u rdf:type ns:capteur)(?u ns:nom ?t) equal(?t, "fo1") (?x ns:state ?w) equal(?w ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "regarder la television") (?h rdf:type ns:activite)(?h ns:libele ?ww) equal(?ww, "aller au toilette") -> (?z ns:state 1) (?h ns:state 1)]

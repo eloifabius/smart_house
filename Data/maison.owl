@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5">
+    <Prefix name="" IRI="http://www.semanticweb.org/simpore/ontologies/2021/0/untitled-ontology-5#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Buanderie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CabineDeDouche"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Canape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chaise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chambre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Co1_PorteDeLaMaison"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Co2_PorteDeLaSalleDeBain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Co3_PorteDeLaCabineDeDouche"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cuisine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Di1_Robinet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Di2_Toilette"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Di3_Chaise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Di4_Chaise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Equipement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fauteuil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fo1_Canape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fo2_Canape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fo3_Lit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Garderobe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ir1_TV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Maison"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ph1_GardeRobe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ph2_Canape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ph3_Refrigerateur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ph4_TiroirDeCuisine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ph5_GardeRobe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ph6_ArmoireDeToilette"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Refrigerateur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Résident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SalledeBain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Salon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#So1_Hall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#So2_Cuisine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sortie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Te1_Cuisine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Television"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TiroirdeCuisine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#capteurs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#couloir"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Est_Localise_Dans"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Est_associe_A"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Temps"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Valeur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#test2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#test3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#test4"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Buanderie"/>
+        <Class IRI="#Maison"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CabineDeDouche"/>
+        <Class IRI="#Equipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Canape"/>
+        <Class IRI="#Equipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chaise"/>
+        <Class IRI="#Equipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chambre"/>
+        <Class IRI="#Maison"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Co1_PorteDeLaMaison"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Co2_PorteDeLaSalleDeBain"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Co3_PorteDeLaCabineDeDouche"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cuisine"/>
+        <Class IRI="#Maison"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Di1_Robinet"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Di2_Toilette"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Di3_Chaise"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Di4_Chaise"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fauteuil"/>
+        <Class IRI="#Equipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fo1_Canape"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fo2_Canape"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fo3_Lit"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Garderobe"/>
+        <Class IRI="#Equipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ir1_TV"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lit"/>
+        <Class IRI="#Equipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ph1_GardeRobe"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ph2_Canape"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ph3_Refrigerateur"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ph4_TiroirDeCuisine"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ph5_GardeRobe"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ph6_ArmoireDeToilette"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Refrigerateur"/>
+        <Class IRI="#Equipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SalledeBain"/>
+        <Class IRI="#Maison"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Salon"/>
+        <Class IRI="#Maison"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#So1_Hall"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#So2_Cuisine"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sortie"/>
+        <Class IRI="#Maison"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Te1_Cuisine"/>
+        <Class IRI="#capteurs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Television"/>
+        <Class IRI="#Equipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TiroirdeCuisine"/>
+        <Class IRI="#Equipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#couloir"/>
+        <Class IRI="#Maison"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Buanderie"/>
+        <Class IRI="#Chambre"/>
+        <Class IRI="#Cuisine"/>
+        <Class IRI="#SalledeBain"/>
+        <Class IRI="#Salon"/>
+        <Class IRI="#Sortie"/>
+        <Class IRI="#couloir"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Co1_PorteDeLaMaison"/>
+        <Class IRI="#Co2_PorteDeLaSalleDeBain"/>
+        <Class IRI="#Co3_PorteDeLaCabineDeDouche"/>
+        <Class IRI="#Di1_Robinet"/>
+        <Class IRI="#Di2_Toilette"/>
+        <Class IRI="#Di3_Chaise"/>
+        <Class IRI="#Di4_Chaise"/>
+        <Class IRI="#Fo1_Canape"/>
+        <Class IRI="#Fo2_Canape"/>
+        <Class IRI="#Fo3_Lit"/>
+        <Class IRI="#Ir1_TV"/>
+        <Class IRI="#Ph1_GardeRobe"/>
+        <Class IRI="#Ph2_Canape"/>
+        <Class IRI="#Ph3_Refrigerateur"/>
+        <Class IRI="#Ph4_TiroirDeCuisine"/>
+        <Class IRI="#Ph5_GardeRobe"/>
+        <Class IRI="#Ph6_ArmoireDeToilette"/>
+        <Class IRI="#So1_Hall"/>
+        <Class IRI="#So2_Cuisine"/>
+        <Class IRI="#Te1_Cuisine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Garderobe"/>
+        <Class IRI="#Lit"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Refrigerateur"/>
+        <Class IRI="#TiroirdeCuisine"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Est_Localise_Dans"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Est_associe_A"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Est_Localise_Dans"/>
+        <Class IRI="#Equipement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Est_Localise_Dans"/>
+        <Class IRI="#Résident"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Est_Localise_Dans"/>
+        <Class IRI="#capteurs"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Est_associe_A"/>
+        <Class IRI="#capteurs"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Est_Localise_Dans"/>
+        <Class IRI="#Maison"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Est_associe_A"/>
+        <Class IRI="#Equipement"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Temps"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Type"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Valeur"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nom"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Temps"/>
+        <Class IRI="#capteurs"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Type"/>
+        <Class IRI="#Maison"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Valeur"/>
+        <Class IRI="#capteurs"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nom"/>
+        <Class IRI="#Résident"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Temps"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Type"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Valeur"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nom"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
