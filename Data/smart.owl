@@ -77,6 +77,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#moment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#moment">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#nom -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#nom">
@@ -122,6 +130,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#moment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#moment"/>
+    
+
+
     <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#piece -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#piece"/>
@@ -145,11 +159,150 @@
     
 
 
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Aller_aux_toilettes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Aller_aux_toilettes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Aller aux toilettes</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Avoir_un_invite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Avoir_un_invite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Avoir un invite</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Avoir_une_conversation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Avoir_une_conversation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Avoir une conversation</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Chambre -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Chambre">
         <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#piece"/>
         <nom>Chambre</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Changer_de_vetements -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Changer_de_vetements">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Changer de vetements</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Dejeuner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Dejeuner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Dejeuner</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Diner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Diner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Diner</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Dormir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Dormir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Dormir</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Ecouter_de_la_musique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Ecouter_de_la_musique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Ecouter de la musique</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Etudier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Etudier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Etudier</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Faire_la_lessive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Faire_la_lessive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Faire la lessive</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Faire_la_sieste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Faire_la_sieste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Faire la sieste</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Faire_le_menage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Faire_le_menage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Faire le menage</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Laver_la_vaisselle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Laver_la_vaisselle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Laver la vaisselle</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Lire_un_livre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Lire_un_livre">
+        <libele>Lire un livre</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
     </owl:NamedIndividual>
     
 
@@ -163,6 +316,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Parler_au_telephone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Parler_au_telephone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Parler au telephone</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Popy -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Popy">
@@ -172,11 +335,90 @@
     
 
 
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Prendre_diner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Prendre_diner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Prendre diner</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Prendre_le_gouter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Prendre_le_gouter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Prendre le gouter</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Prendre_une_douche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Prendre_une_douche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Prendre une douche</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Preparer_le_diner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Preparer_le_diner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Preparer le diner</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Regarder_la_television -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Regarder_la_television">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Regarder la television</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Se_brosser_les_dents -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Se_brosser_les_dents">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Se brosser les dents</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Se_raser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Se_raser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Se raser</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Television -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Television">
         <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#equipement"/>
         <nom>Television</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Utiliser_Internet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#Utiliser_Internet">
+        <libele>Utiliser Internet</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
     </owl:NamedIndividual>
     
 
@@ -205,7 +447,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#aller_au_toilette">
         <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
-        <libele>aller au toilette</libele>
+        <libele>Aller au toilette</libele>
         <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
     </owl:NamedIndividual>
     
@@ -321,6 +563,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#moment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#moment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#moment"/>
+        <moment></moment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#ph1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#ph1">
@@ -395,7 +646,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#se_connecter_a_internet">
         <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
-        <libele>se connecter a internet</libele>
+        <libele>Se connecter a internet</libele>
         <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
     </owl:NamedIndividual>
     

@@ -10,5 +10,42 @@
 //[rule3: (?x ns:state ?d) equal(?d ,1) -> (?x ns:state 0)]
 
 //[rule2: (?x rdf:type ns:capteur)(?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "preparer petit dej") -> (?z ns:state 1)]
-//[rule2: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "fo1") (?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "regarder la television") -> (?z ns:state 1)]
-[rule2: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "fo1") (?x ns:state ?d) equal(?d ,1) (?e rdf:type ns:capteur)(?e ns:nom ?o) equal(?o, "di3") (?e ns:state ?l) equal(?l ,1) (?u rdf:type ns:capteur)(?u ns:nom ?t) equal(?t, "fo1") (?x ns:state ?w) equal(?w ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "regarder la television") (?h rdf:type ns:activite)(?h ns:libele ?ww) equal(?ww, "aller au toilette") -> (?z ns:state 1) (?h ns:state 1)]
+//[rule2: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "fo1") (?x ns:state ?d) equal(?d ,1) (?e rdf:type ns:capteur)(?e ns:nom ?o) equal(?o, "di3") (?e ns:state ?l) equal(?l ,1) (?u rdf:type ns:capteur)(?u ns:nom ?t) equal(?t, "fo1") (?x ns:state ?w) equal(?w ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Regarder la television") (?h rdf:type ns:activite)(?h ns:libele ?ww) equal(?ww, "aller au toilette") -> (?z ns:state 1) (?h ns:state 1)]
+
+//[rule3: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "fo1") (?x ns:state ?d) equal(?d ,1) (?e rdf:type ns:capteur)(?e ns:nom ?o) equal(?o, "di3") (?e ns:state ?l) equal(?l ,1) (?u rdf:type ns:capteur)(?u ns:nom ?t) equal(?t, "fo1") (?x ns:state ?w) equal(?w ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Regarder la television") (?h rdf:type ns:activite)(?h ns:libele ?ww) equal(?ww, "aller au toilette") -> (?z ns:state 1) (?h ns:state 1)]
+
+[rule3: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "fo3") (?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Dormir") -> (?z ns:state 1)]
+
+[rule4: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "di4") (?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Etudier") -> (?z ns:state 1)]
+
+[rule5: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "co2") (?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Prendre une douche") -> (?z ns:state 1)]
+
+[rule6: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "co2") (?x ns:state ?d) equal(?d ,1) (?e rdf:type ns:capteur)(?e ns:nom ?o) equal(?o, "di2") (?e ns:state ?l) equal(?l ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "aller au toilette") -> (?z ns:state 1)]
+
+[rule7: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "fo2") (?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Faire la sieste") -> (?z ns:state 1)]
+
+[rule8: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "so1") (?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Se connecter a internet") -> (?z ns:state 1)]
+
+[rule9: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "ph1") (?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "laverie") -> (?z ns:state 1)]
+
+[rule10: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "ph6") (?x ns:state ?d) equal(?d ,1) (?e rdf:type ns:capteur)(?e ns:nom ?o) equal(?o, "Di1") (?e ns:state ?l) equal(?l ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Se raser") -> (?z ns:state 1)]
+
+[rule11: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "ir1") (?x ns:state ?d) equal(?d ,1) (?e rdf:type ns:capteur)(?e ns:nom ?o) equal(?o, "di1") (?e ns:state ?l) equal(?l ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Se brosser les dents") (?z1 rdf:type ns:activite)(?z1 ns:libele ?n1) equal(?n1, "regarder la television") -> (?z ns:state 1)(?z1 ns:state 1)]
+
+[rule12: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "so1") (?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Parler au telephone") -> (?z ns:state 1)]
+
+[rule13: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "ph1") (?x ns:state ?d) equal(?d ,1) (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Changer de vetements") -> (?z ns:state 1)]
+
+
+
+[rule14: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "di3") (?x ns:state ?d) equal(?d ,1) (?p rdf:type ns:moment)(?p ns:moment ?mo) equal(?mo, "matin") (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "prendre petit dej") -> (?z ns:state 1)]
+
+[rule15: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "di3") (?x ns:state ?d) equal(?d ,1) (?p rdf:type ns:moment)(?p ns:moment ?mo) equal(?mo, "soiree") (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Prendre diner") -> (?z ns:state 1)]
+
+
+[rule16: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "so2") (?x ns:state ?d) equal(?d ,1) (?e rdf:type ns:capteur)(?e ns:nom ?o) equal(?o, "te1") (?e ns:state ?l) equal(?l ,1) (?p rdf:type ns:moment)(?p ns:moment ?mo) equal(?mo, "matin") (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "preparer petit dej") -> (?z ns:state 1)]
+
+[rule17: (?x rdf:type ns:capteur)(?x ns:nom ?m) equal(?m, "so2") (?x ns:state ?d) equal(?d ,1) (?e rdf:type ns:capteur)(?e ns:nom ?o) equal(?o, "te1") (?e ns:state ?l) equal(?l ,1) (?p rdf:type ns:moment)(?p ns:moment ?mo) equal(?mo, "soiree") (?z rdf:type ns:activite)(?z ns:libele ?n) equal(?n, "Preparer le diner") -> (?z ns:state 1)]
+
+
+

@@ -37,9 +37,22 @@ public class InsertTime {
 			return String.format("00:00:%02d",second);
 		}
 	}
+	public static String moment (long second) {
+		 
+		TimeUnit timeunit = TimeUnit.SECONDS;
+		long hour = timeunit.toHours(second)%24;
+		
+		if(hour <= 12 ) {
+			return "matin";
+		} else if(hour > 12 && hour < 17) {
+			return "journee";
+		} else {
+			return "soiree";
+		}
+	}
 	
 	public static void main (String [] args) throws IOException {
-		File file = new File ("Data/DAY_1.txt");
+		/*File file = new File ("Data/DAY_1.txt");
 		
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		FileWriter fw = new FileWriter("C:/Users/utilisateur/Desktop/projects/Projet_Environnement_Intelligent-main/OntologieProject/Data/times.txt");
@@ -52,6 +65,8 @@ public class InsertTime {
 			System.out.println(secondToFulltime(i)+" "+chaine);
 			i++;
 		} 
-		fw.close();
+		fw.close();*/
+		
+		System.out.println(InsertTime.moment(64800));
 	}
 }

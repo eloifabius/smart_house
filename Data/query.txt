@@ -7,5 +7,6 @@ where
 {
     ?x rdf:type ns:activite.
     ?x ns:libele ?y.
-    ?x ns:state ?z
+    ?x ns:state ?z.
+    ?x ns:state 1
 }

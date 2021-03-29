@@ -51,6 +51,7 @@ public static void main(String[] args) throws IOException {
     for(int i = 0; i< chaine.length; i++) {
     	if(chaine[i].equals("1")) {
     		JenaEngine.updateValueOfDataTypeProperty(model, NS, InitIndividuals.getSensors(i), "state", 1);
+    		JenaEngine.updateValueOfDataTypeProperty(model, NS, "moment", "moment", InsertTime.moment(64800));
     	}
     }
     
@@ -60,7 +61,8 @@ public static void main(String[] args) throws IOException {
     Model inferedModel =
     JenaEngine.readInferencedModelFromRuleFile(owlInferencedModel,"Data/rules.txt");
     // query on the model after inference
-    System.out.println(JenaEngine.executeQueryFile(inferedModel,"Data/query.txt"));
+    String reults = JenaEngine.executeQueryFile(inferedModel,"Data/query.txt");
+    System.out.println(reults);
     } else {
     System.out.println("Error when reading model from ontology");
     }
