@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import itsudparis.tools.JenaEngine;
@@ -29,6 +30,7 @@ public class Dashboard {
 	public static JLabel text_res2 = new JLabel("------------");
 	public static JLabel equipements = new JLabel("Equipements utilisés : ");
 	public static JLabel txtequip = new JLabel("lit\n canape");
+	public static JLabel heure = new JLabel(" ");
     
 	public static JLabel ph1 = new JLabel("Ph1");
 	public static JLabel ph2 = new JLabel("Ph2");
@@ -51,7 +53,7 @@ public class Dashboard {
 	public static JLabel di3 = new JLabel("Di3");
 	public static JLabel di4 = new JLabel("Di4");
 	
-	public static String equipementsName = " || ";
+	public static String equipementsName = " ";
 	
 	public static ImagePanel panel = new ImagePanel(
 	        new ImageIcon("resources\\bcg.jpeg").getImage());
@@ -244,7 +246,7 @@ public class Dashboard {
 	}
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
     
     //a la base tous les capteurs sont eteints
     
@@ -283,6 +285,7 @@ public class Dashboard {
     ph4.setLocation(316,334);
     di3.setLocation(226,280);
     so1.setLocation(517,221);
+    heure.setLocation(729, 485);
     //label size
     text_res1.setSize(new Dimension(500,35));
     text_res2.setSize(new Dimension(500,35));
@@ -311,12 +314,14 @@ public class Dashboard {
     resident2.setSize(new Dimension(150,50));    
     equipements.setSize(new Dimension(150,50));
     txtequip.setSize(new Dimension(300,50));
+    heure.setSize(new Dimension(200,50));
     //label color    
     //salon.setForeground(Color.blue);
     
     resident1.setForeground(Color.blue);
     resident2.setForeground(Color.blue);
     
+    panel.add(heure);
     panel.add(equipements);
     panel.add(resident1);
     panel.add(resident2);
@@ -355,39 +360,56 @@ public class Dashboard {
     Model model = JenaEngine.readModel("Data/smart.owl");
     if (model != null) {
     NS = model.getNsPrefixURI("");
+    String hour;
+    long compt = 0;
     
     
     List<String> allLines = Files.readAllLines(Paths.get("Data/DAY_1.txt"));
     String sensorName;
-    String[] chaine = allLines.get(0).split(" ");
-    initSensor();
-    for(int i = 0; i< chaine.length; i++) {
-    	if(chaine[i].equals("1")) {
-    		sensorName = InitIndividuals.getSensors(i);
-    		JenaEngine.updateValueOfDataTypeProperty(model, NS, sensorName, "state", 1);
-    		onoff(sensorName);
-    		showSensor(sensorName);
-    		txtequip.setText(equipementsName);
-    		JenaEngine.updateValueOfDataTypeProperty(model, NS, "moment", "moment", InsertTime.moment(64800));
-    	}
+    String[] chaine;
+    
+    for(String g: allLines) {
+    	compt++;
+    	hour = InsertTime.timeUnitToFullTime(compt, TimeUnit.SECONDS);
+		heure.setText(hour);
+    	chaine = g.split(" ");
+        initSensor();
+        for(int i = 0; i< chaine.length; i++) {
+        	if(chaine[i].equals("1")) {
+        		sensorName = InitIndividuals.getSensors(i);
+        		
+        		System.out.println(sensorName);
+        		JenaEngine.updateValueOfDataTypeProperty(model, NS, sensorName, "state", 1);
+        		onoff(sensorName);
+        		showSensor(sensorName);
+        		txtequip.setText(equipementsName);
+        		JenaEngine.updateValueOfDataTypeProperty(model, NS, "moment", "moment", InsertTime.moment(i));
+        	}
+            //Thread.sleep(10);
+        }
+        
+        Model owlInferencedModel =
+        	    JenaEngine.readInferencedModelFromRuleFile(model, "Data/owlrules.txt");
+        	    // apply our rules on the owlInferencedModel
+        	    Model inferedModel =
+        	    JenaEngine.readInferencedModelFromRuleFile(owlInferencedModel,"Data/rules.txt");
+        	    // query on the model after inference
+        	    String results = JenaEngine.executeQueryFile(inferedModel,"Data/query.txt");
+        	    String[] Arr = results.replaceAll("[\\s\\p{Punct}]"," ").trim().split("  ");
+        	    //System.out.println(results.replaceAll("[\\s\\p{Punct}]"," ").trim());
+        	    ArrayList <String> tabstr = removeDuplicate(Arr);
+        	    for (String i : tabstr) {
+        	        System.out.println(i + ",");
+        	      }
+        	    
+        	    text_res1.setText(tabstr.get(2));
+        	    //text_res2.setText(tabstr.get(3));
+        	    equipementsName = "";
+        
     }
+  
     
-    Model owlInferencedModel =
-    JenaEngine.readInferencedModelFromRuleFile(model, "Data/owlrules.txt");
-    // apply our rules on the owlInferencedModel
-    Model inferedModel =
-    JenaEngine.readInferencedModelFromRuleFile(owlInferencedModel,"Data/rules.txt");
-    // query on the model after inference
-    String results = JenaEngine.executeQueryFile(inferedModel,"Data/query.txt");
-    String[] Arr = results.replaceAll("[\\s\\p{Punct}]"," ").trim().split("  ");
-    //System.out.println(results.replaceAll("[\\s\\p{Punct}]"," ").trim());
-    ArrayList <String> tabstr = removeDuplicate(Arr);
-    for (String i : tabstr) {
-        System.out.println(i + ",");
-      }
     
-    text_res1.setText(tabstr.get(2));
-    text_res2.setText(tabstr.get(3));
 
     } else {
     System.out.println("Error when reading model from ontology");

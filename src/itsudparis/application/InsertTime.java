@@ -30,9 +30,9 @@ public class InsertTime {
 		{
 			return String.format("%dday %02d:%02d:%02d",day,hour,minute,second);
 		}else if (hour>0) {
-			return String.format("%d %02d:%02d",hour,minute,second);
+			return String.format("%d:%02d:%02d",hour,minute,second);
 		}else if (minute>0) {
-			return String.format("00 %d:%02d",minute,second);
+			return String.format("00:%d:%02d",minute,second);
 		}else {
 			return String.format("00:00:%02d",second);
 		}
