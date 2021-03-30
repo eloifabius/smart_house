@@ -9,6 +9,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.List;
+
+import com.hp.hpl.jena.rdf.model.Model;
+import itsudparis.tools.JenaEngine;
+
 public class Dashboard {
 	
 	public static JLabel resident1 = new JLabel("Resident 1 : ");
@@ -39,6 +51,8 @@ public class Dashboard {
 	public static JLabel di3 = new JLabel("Di3");
 	public static JLabel di4 = new JLabel("Di4");
 	
+	public static String equipementsName = " || ";
+	
 	public static ImagePanel panel = new ImagePanel(
 	        new ImageIcon("resources\\bcg.jpeg").getImage());
 	
@@ -49,48 +63,204 @@ public class Dashboard {
 	 
 	}
 	
+	public static void onoff(String sensor) {
+		switch (sensor) {
+		case "ph1":
+			allumer(ph1);
+			break;
+		case "ph2":
+			allumer(ph2);
+			break;
+		case "ir1":
+			allumer(ir1);
+			break;
+		case "ph3":
+			allumer(ph3);
+			break;
+		case "ph4":
+			allumer(ph4);
+			break;
+		case "ph5":
+			allumer(ph5);
+			break;
+		case "ph6":
+			allumer(ph6);
+			break;
+		case "co1":
+			allumer(co1);
+			break;
+		case "co2":
+			allumer(co2);
+			break;
+		case "co3":
+			allumer(co3);
+			break;	
+		case "so1":
+			allumer(so1);
+			break;
+		case "so2":
+			allumer(so2);
+			break;
+		case "di1":
+			allumer(di1);
+			break;
+		case "di2":
+			allumer(di2);
+			break;
+		case "te1":
+			allumer(te1);
+			break;
+		case "fo1":
+			allumer(fo1);
+			break;
+		case "fo2":
+			allumer(fo2);
+			break;
+		case "fo3":
+			allumer(fo3);
+			break;
+		case "di3":
+			allumer(di3);
+			break;
+		case "di4":
+			allumer(di4);
+			break;	
+		}
+	}
+	
+	public static void concatName (String eqName) {
+		equipementsName = equipementsName  + eqName + " || ";
+	}
+	
+	public static void showSensor(String sensor) {
+		switch (sensor) {
+		case "ph1":
+			concatName("GardeRobe");
+			break;
+		case "ph2":
+			concatName("Canapé");
+			break;
+		case "ir1":
+			concatName("Télévision");
+			break;
+		case "ph3":
+			concatName("Réfrigérateur");
+			break;
+		case "ph4":
+			concatName("Tiroir cuisine");
+			break;
+		case "ph5":
+			concatName("GardeRobe");
+			break;
+		case "ph6":
+			concatName("Armoire toilette");
+			break;
+		case "co1":
+			concatName("Porte maison");
+			break;
+		case "co2":
+			concatName("Porte Salle de bain");
+			break;
+		case "co3":
+			concatName("Porte douche");
+			break;	
+		case "so1":
+			concatName("Couloir");
+			break;
+		case "so2":
+			concatName("Cuisine");
+			break;
+		case "di1":
+			concatName("Robinet");
+			break;
+		case "di2":
+			concatName("Toilette");
+			break;
+		case "te1":
+			concatName("Cuisine");
+			break;
+		case "fo1":
+			concatName("Canape");
+			break;
+		case "fo2":
+			concatName("Canape");
+			break;
+		case "fo3":
+			concatName("Lit");
+			break;
+		case "di3":
+			concatName("Chaise2");
+			break;
+		case "di4":
+			concatName("Chaise1");
+			break;	
+		}
+	}
+	
 	public static void eteindre(JLabel capteur)
 	{	 
 	 capteur.setBackground(Color.RED);
 	 capteur.setOpaque(true);
 	}
+	
+	public static void initSensor() {
+		eteindre(ph1);
+	    eteindre(ph2);
+	    eteindre(ir1);
+	    eteindre(ph3);
+	    eteindre(ph4);
+	    eteindre(ph5);
+	    eteindre(ph6);
+	    eteindre(co1);
+	    eteindre(co2);
+	    eteindre(co3);
+	    eteindre(so1);
+	    eteindre(so2);
+	    eteindre(di1);
+	    eteindre(di2);
+	    eteindre(te1);
+	    eteindre(fo3);
+	    eteindre(fo1);
+	    eteindre(fo2);
+	    eteindre(di3);
+	    eteindre(di4);
+	}
+	
+	public static ArrayList removeDuplicate(String[] arlList)
+	{
+	 ArrayList <String> strr = new ArrayList<String>();
+;
+	 for (String a : arlList){
+		 strr.add(a);
+	 }
+     
+	 LinkedHashSet<String> hashSet = new LinkedHashSet<>(strr);
+     
+     ArrayList<String> listWithoutDuplicates = new ArrayList<>(hashSet);
 
-    public static void main(String[] args) {
+
+	 
+	 return listWithoutDuplicates;
+	}
+
+
+    public static void main(String[] args) throws IOException {
     
     //a la base tous les capteurs sont eteints
-    eteindre(ph1);
-    eteindre(ph2);
-    eteindre(ir1);
-    eteindre(ph3);
-    eteindre(ph4);
-    eteindre(ph5);
-    eteindre(ph6);
-    eteindre(co1);
-    eteindre(co2);
-    eteindre(co3);
-    eteindre(so1);
-    eteindre(so2);
-    eteindre(di1);
-    eteindre(di2);
-    eteindre(te1);
-    eteindre(fo3);
-    eteindre(fo1);
-    eteindre(fo2);
-    eteindre(di3);
-    eteindre(di4);
+    
     //allumer
-    allumer(co1);
+    /*allumer(co1);
     allumer(co2);
     allumer(co3);
     allumer(so1);
     allumer(so2);
-    allumer(di1);
+    allumer(di1);*/
     
     //label position
     resident1.setLocation(15,10);
     resident2.setLocation(15,30);
-    equipements.setLocation(15,50);
-    txtequip.setLocation(15,70);
+    equipements.setLocation(574,22);
+    txtequip.setLocation(574,50);
     text_res1.setLocation(85,18);
     text_res2.setLocation(85,36);
     ph1.setLocation(461,174);
@@ -114,8 +284,8 @@ public class Dashboard {
     di3.setLocation(226,280);
     so1.setLocation(517,221);
     //label size
-    text_res1.setSize(new Dimension(50,35));
-    text_res2.setSize(new Dimension(50,35));
+    text_res1.setSize(new Dimension(500,35));
+    text_res2.setSize(new Dimension(500,35));
     ph1.setSize(new Dimension(25,25));
     ph2.setSize(new Dimension(25,25));
     ph4.setSize(new Dimension(25,25));
@@ -140,7 +310,7 @@ public class Dashboard {
     resident1.setSize(new Dimension(150,50));
     resident2.setSize(new Dimension(150,50));    
     equipements.setSize(new Dimension(150,50));
-    txtequip.setSize(new Dimension(150,50));
+    txtequip.setSize(new Dimension(300,50));
     //label color    
     //salon.setForeground(Color.blue);
     
@@ -180,6 +350,49 @@ public class Dashboard {
     frame.getContentPane().add(panel);
     frame.pack();
     frame.setVisible(true);
+    
+    String NS = "";
+    Model model = JenaEngine.readModel("Data/smart.owl");
+    if (model != null) {
+    NS = model.getNsPrefixURI("");
+    
+    
+    List<String> allLines = Files.readAllLines(Paths.get("Data/DAY_1.txt"));
+    String sensorName;
+    String[] chaine = allLines.get(0).split(" ");
+    initSensor();
+    for(int i = 0; i< chaine.length; i++) {
+    	if(chaine[i].equals("1")) {
+    		sensorName = InitIndividuals.getSensors(i);
+    		JenaEngine.updateValueOfDataTypeProperty(model, NS, sensorName, "state", 1);
+    		onoff(sensorName);
+    		showSensor(sensorName);
+    		txtequip.setText(equipementsName);
+    		JenaEngine.updateValueOfDataTypeProperty(model, NS, "moment", "moment", InsertTime.moment(64800));
+    	}
+    }
+    
+    Model owlInferencedModel =
+    JenaEngine.readInferencedModelFromRuleFile(model, "Data/owlrules.txt");
+    // apply our rules on the owlInferencedModel
+    Model inferedModel =
+    JenaEngine.readInferencedModelFromRuleFile(owlInferencedModel,"Data/rules.txt");
+    // query on the model after inference
+    String results = JenaEngine.executeQueryFile(inferedModel,"Data/query.txt");
+    String[] Arr = results.replaceAll("[\\s\\p{Punct}]"," ").trim().split("  ");
+    //System.out.println(results.replaceAll("[\\s\\p{Punct}]"," ").trim());
+    ArrayList <String> tabstr = removeDuplicate(Arr);
+    for (String i : tabstr) {
+        System.out.println(i + ",");
+      }
+    
+    text_res1.setText(tabstr.get(2));
+    text_res2.setText(tabstr.get(3));
+
+    } else {
+    System.out.println("Error when reading model from ontology");
+    }
+    
   }
 }
 
