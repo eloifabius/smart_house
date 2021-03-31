@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -133,6 +134,7 @@ public class Dashboard {
 	public static void concatName (String eqName) {
 		equipementsName = equipementsName  + eqName + " || ";
 	}
+
 	
 	public static void showSensor(String sensor) {
 		switch (sensor) {
@@ -369,13 +371,17 @@ public class Dashboard {
     String[] chaine;
     
     for(String g: allLines) {
+       
     	compt++;
     	hour = InsertTime.timeUnitToFullTime(compt, TimeUnit.SECONDS);
 		heure.setText(hour);
     	chaine = g.split(" ");
         initSensor();
+        ArrayList <Integer> temp = new ArrayList<Integer>();
         for(int i = 0; i< chaine.length; i++) {
+        	
         	if(chaine[i].equals("1")) {
+        		temp.add(i);
         		sensorName = InitIndividuals.getSensors(i);
         		
         		System.out.println(sensorName);
@@ -386,6 +392,7 @@ public class Dashboard {
         		JenaEngine.updateValueOfDataTypeProperty(model, NS, "moment", "moment", InsertTime.moment(i));
         	}
             //Thread.sleep(10);
+        	
         }
         
         Model owlInferencedModel =
@@ -402,18 +409,29 @@ public class Dashboard {
         	        System.out.println(i + ",");
         	      }
         	    
-        	    if(tabstr.size() > 3) {
+        	    if(tabstr.size() ==4) {
         	    	text_res1.setText(tabstr.get(2));
             	    text_res2.setText(tabstr.get(3));
-        	    } else {
-        	    	text_res1.setText(tabstr.get(2));
-        	    }
+        	    } 
         	    
-        	    equipementsName = "";
+        	    if(tabstr.size() >=5) {
+        	    	text_res1.setText(tabstr.get(2));
+            	    text_res2.setText(tabstr.get(4));}
+        	    
+        	    /*else {
+        	    	text_res1.setText(tabstr.get(2));
+        	    }*/
+        	    Thread.sleep(1000);
+        	    for(int k = 0; k < temp.size(); k++) {
+        	    	JenaEngine.updateValueOfDataTypeProperty(model, NS, InitIndividuals.getSensors(temp.get(k)), "state", 0);
+        	    }
+        	   equipementsName = "";
+        	  text_res1.setText("______________");
+        	  text_res2.setText("______________");
+        	  txtequip.setText("_______________");
         
     }
   
-    
     
 
     } else {
