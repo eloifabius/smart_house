@@ -672,6 +672,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#sortir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#sortir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#activite"/>
+        <libele>Sortir</libele>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</state>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#te1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utilisateur/ontologies/2021/2/untitled-ontology-27#te1">

@@ -402,8 +402,13 @@ public class Dashboard {
         	        System.out.println(i + ",");
         	      }
         	    
-        	    text_res1.setText(tabstr.get(2));
-        	    //text_res2.setText(tabstr.get(3));
+        	    if(tabstr.size() > 3) {
+        	    	text_res1.setText(tabstr.get(2));
+            	    text_res2.setText(tabstr.get(3));
+        	    } else {
+        	    	text_res1.setText(tabstr.get(2));
+        	    }
+        	    
         	    equipementsName = "";
         
     }
